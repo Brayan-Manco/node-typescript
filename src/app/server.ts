@@ -1,7 +1,6 @@
 import express, {Application, Router} from 'express';
 import cors from "cors";
-import RouterConfig from './routesConfig';
-// import  RouterUser  from '../routers/user';
+import RouterInventory from './RouterConfig';
 
 class Server {
 
@@ -24,9 +23,8 @@ class Server {
 
     routes(){
         const router = Router();
-        RouterConfig(router);
+        RouterInventory(router);// (/)
         this.app.use(router);
-        // this.app.use('/user', RouterUser)
     }
 
     mdlewares() {
