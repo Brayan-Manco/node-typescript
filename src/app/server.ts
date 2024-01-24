@@ -1,6 +1,6 @@
 import express, {Application, Router} from 'express';
 import cors from "cors";
-import RouterInventory from './RouterConfig';
+import RouterInventory from './config/RouterConfig';
 
 class Server {
 
@@ -23,7 +23,7 @@ class Server {
 
     routes(){
         const router = Router();
-        RouterInventory(router);// (/)
+        RouterInventory(router);
         this.app.use(router);
     }
 

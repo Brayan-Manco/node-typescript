@@ -1,9 +1,8 @@
 import { Router } from 'express';
-import { getProduct } from './controllers/product';
-
+import productRouter from '../routers/pruductRouter';
 
 const RouterInventory = ( router: Router) => {
-    router.use('/product', getProduct);
+    router.use('/product', productRouter);
 }
 
 export default RouterInventory;

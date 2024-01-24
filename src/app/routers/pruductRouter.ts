@@ -3,7 +3,7 @@ import { getProduct } from "../controllers/product";
 
 const router = Router();
 
-router.get('/', getProduct);
+router.get('/getProducts', getProduct);
 
 
  export default router;
