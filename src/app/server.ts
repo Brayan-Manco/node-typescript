@@ -13,6 +13,7 @@ class Server {
 
         this.routes();
         this.mdlewares();
+        // this.dbConnect();
     }
 
     listen(){
@@ -31,6 +32,17 @@ class Server {
         this.app.use(express.json());
         this.app.use(cors());
     }
+
+    // ejemplo de conexion de datos 
+
+    // async dbConnect() {
+    //     try {
+    //         await sequelize.sync();
+    //         console.log('Conexión Exitosa');
+    //     } catch (error) {
+    //         console.error('Unable to connect to the database:', error);
+    //     }
+    // }
 }
 
 export default Server;
